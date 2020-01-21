@@ -1,4 +1,4 @@
-FROM alpine:3.3
+FROM alpine:3.11
 MAINTAINER Alexander Jung-Loddenkemper <alexander@julo.ch>
 
 ENV DG_VERSION 0.7.3
