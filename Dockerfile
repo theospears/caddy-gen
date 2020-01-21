@@ -11,7 +11,7 @@ RUN apk add --no-cache ca-certificates && apk add --virtual deps wget tar \
 RUN mkdir -p /opt/caddy-gen /etc/caddy
 WORKDIR /opt/caddy-gen
 
-VOLUME ['/etc/caddy']
+VOLUME /etc/caddy
 
 COPY . /opt/caddy-gen
 CMD /usr/local/bin/docker-gen -notify ./reload.sh -notify-output -only-exposed -watch Caddyfile.tmpl /etc/caddy/Caddyfile
